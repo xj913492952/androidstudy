@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="E:\Android\Projects\androidstudy\lib_zxing\src\main\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="E:\Android\Projects\androidstudy\lib_zxing\src\main\res"><file name="ic_navigation_left" path="E:\Android\Projects\androidstudy\lib_zxing\src\main\res\drawable\ic_navigation_left.xml" qualifiers="" type="drawable"/><file name="left_arrow_white" path="E:\Android\Projects\androidstudy\lib_zxing\src\main\res\drawable\left_arrow_white.png" qualifiers="" type="drawable"/><file name="activity_capturer" path="E:\Android\Projects\androidstudy\lib_zxing\src\main\res\layout\activity_capturer.xml" qualifiers="" type="layout"/><file name="beep" path="E:\Android\Projects\androidstudy\lib_zxing\src\main\res\raw\beep.ogg" qualifiers="" type="raw"/><file path="E:\Android\Projects\androidstudy\lib_zxing\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="CouponStyle">
+        <attr name="vertical_style">
+            <enum name="none" value="0"/>
+            <enum name="circle" value="1"/>
+            <enum name="triangle" value="2"/>
+        </attr>
+        <attr name="horizontal_style">
+            <enum name="none" value="0"/>
+            <enum name="circle" value="1"/>
+            <enum name="triangle" value="2"/>
+        </attr>
+    </declare-styleable><declare-styleable name="ZzHorizontalProgressBar">
+        <attr format="dimension" name="zpb_padding"/>
+        <attr format="color|reference" name="zpb_bg_color"/>
+        <attr format="color|reference" name="zpb_pb_color"/>
+        <attr format="integer" name="zpb_max"/>
+        <attr format="integer" name="zpb_progress"/>
+    </declare-styleable><declare-styleable name="ViewfinderView">
+        <attr format="color" name="corner_color"/>
+        <attr format="color" name="laser_color"/>
+        <attr format="color" name="frame_color"/>
+        <attr format="color" name="mask_color"/>
+        <attr format="color" name="result_point_color"/>
+        <attr format="color" name="result_color"/>
+        <attr format="color" name="label_text_color"/>
+        <attr format="string" name="label_text"/>
+        <attr format="dimension" name="label_text_size"/>
+    </declare-styleable></file><file path="E:\Android\Projects\androidstudy\lib_zxing\src\main\res\values\colors.xml" qualifiers=""><color name="white">#ffffff</color><color name="result_view">#b0000000</color><color name="viewfinder_frame">#DCBA78</color><color name="corner_color">#DCBA78</color><color name="viewfinder_laser">#DCBA78</color><color name="viewfinder_mask">#60000000</color><color name="possible_result_points">#c0ffbd21</color><color name="result_points">#c099cc00</color><color name="button_blue_text">#154a86</color><color name="darker_gray">#aaa</color></file><file path="E:\Android\Projects\androidstudy\lib_zxing\src\main\res\values\ids.xml" qualifiers=""><item name="auto_focus" type="id"/><item name="decode" type="id"/><item name="decode_failed" type="id"/><item name="decode_succeeded" type="id"/><item name="encode_failed" type="id"/><item name="encode_succeeded" type="id"/><item name="quit" type="id"/><item name="restart_preview" type="id"/><item name="return_scan_result" type="id"/></file><file path="E:\Android\Projects\androidstudy\lib_zxing\src\main\res\values\strings.xml" qualifiers=""><string name="zxing_scan_qr_code">QR Code</string><string name="scan_qrcode_tips">The QR code is put into the frame, that is, the scan is completed automatically.</string></file><file path="E:\Android\Projects\androidstudy\lib_zxing\src\main\res\values\styles.xml" qualifiers=""><style name="scaner" parent="Theme.AppCompat.Light.NoActionBar">
+    </style></file><file path="E:\Android\Projects\androidstudy\lib_zxing\src\main\res\values-zh-rCN\strings.xml" qualifiers="zh-rCN"><string name="zxing_scan_qr_code">二维码</string><string name="scan_qrcode_tips">请将二维码放入框内，即可自动扫描</string></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="E:\Android\Projects\androidstudy\lib_zxing\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="E:\Android\Projects\androidstudy\lib_zxing\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="E:\Android\Projects\androidstudy\lib_zxing\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="E:\Android\Projects\androidstudy\lib_zxing\build\generated\res\resValues\debug"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="ViewfinderView">
+        <attr format="color" name="corner_color"/>
+        <attr format="color" name="laser_color"/>
+        <attr format="color" name="frame_color"/>
+        <attr format="color" name="mask_color"/>
+        <attr format="color" name="result_point_color"/>
+        <attr format="color" name="result_color"/>
+        <attr format="color" name="label_text_color"/>
+        <attr format="string" name="label_text"/>
+        <attr format="dimension" name="label_text_size"/>
+    </declare-styleable><declare-styleable name="CouponStyle">
+        <attr name="vertical_style">
+            <enum name="none" value="0"/>
+            <enum name="circle" value="1"/>
+            <enum name="triangle" value="2"/>
+        </attr>
+        <attr name="horizontal_style">
+            <enum name="none" value="0"/>
+            <enum name="circle" value="1"/>
+            <enum name="triangle" value="2"/>
+        </attr>
+    </declare-styleable><declare-styleable name="ZzHorizontalProgressBar">
+        <attr format="dimension" name="zpb_padding"/>
+        <attr format="color|reference" name="zpb_bg_color"/>
+        <attr format="color|reference" name="zpb_pb_color"/>
+        <attr format="integer" name="zpb_max"/>
+        <attr format="integer" name="zpb_progress"/>
+    </declare-styleable></configuration></mergedItems></merger>

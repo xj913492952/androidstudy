@@ -1,0 +1,53 @@
+R_DEF: Internal format may change without notice
+local
+attr? corner_color
+attr? frame_color
+attr? horizontal_style
+attr? label_text
+attr? label_text_color
+attr? label_text_size
+attr? laser_color
+attr? mask_color
+attr? result_color
+attr? result_point_color
+attr? vertical_style
+attr? zpb_bg_color
+attr? zpb_max
+attr? zpb_padding
+attr? zpb_pb_color
+attr? zpb_progress
+color button_blue_text
+color corner_color
+color darker_gray
+color possible_result_points
+color result_points
+color result_view
+color viewfinder_frame
+color viewfinder_laser
+color viewfinder_mask
+color white
+drawable ic_navigation_left
+drawable left_arrow_white
+id auto_focus
+id capture_crop_layout
+id circle
+id decode
+id decode_failed
+id decode_succeeded
+id encode_failed
+id encode_succeeded
+id none
+id preview_view
+id quit
+id restart_preview
+id return_scan_result
+id triangle
+id viewfinder_view
+layout activity_capturer
+raw beep
+string scan_qrcode_tips
+string zxing_scan_qr_code
+style scaner
+styleable CouponStyle vertical_style horizontal_style
+styleable ViewfinderView corner_color laser_color frame_color mask_color result_point_color result_color label_text_color label_text label_text_size
+styleable ZzHorizontalProgressBar zpb_padding zpb_bg_color zpb_pb_color zpb_max zpb_progress

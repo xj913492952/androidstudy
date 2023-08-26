@@ -1,0 +1,188 @@
+<resources>
+
+    <string name="error_no_camera_permission">please open camera permission</string>
+    <string name="error_no_external_storage_permission">please open sdcard permission</string>
+    <string name="error_no_camera_and_external_storage_permission">please open camera and sdcard permission</string>
+    <string name="please_open_contacts_permission">please open contacts permission</string>
+    <string name="error_no_voice_or_sdcard_permission">please open record audio and sdcard permission</string>
+    <string name="please_open_location_permission">please open location permission</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="loading">加载中&#8230;</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="delete_succeed">删除成功</string>
+    <string name="delete_fail">删除失败</string>
+    <string name="request_fail">请求失败</string>
+    <string name="no_data_now">暂时还没数据哦</string>
+    <string name="no_more">没有更多了</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="prompt">提示</string>
+    <string name="clear">清空</string>
+    <string name="sd_card_unavailable">SD不可用</string>
+    <string name="cant_find_pictures">找不到图片</string>
+    <string name="file_does_not_exist">文件不存在</string>
+    <string name="back">返回</string>
+    <string name="save">保存</string>
+    <string name="album">相册</string>
+    <string name="explain">说明</string>
+    <string name="Unlimited">不限</string>
+
+    <string name="hometown">家乡</string>
+    <string name="birthday">生日</string>
+    <string name="sex">性别</string>
+    <string name="age">年龄</string>
+    <string name="body_height">身高</string>
+    <string name="weight">体重</string>
+    <string name="avatar">头像</string>
+    <string name="education">学历</string>
+    <string name="income">收入</string>
+    <string name="occupation">职业</string>
+    <string name="emotion_state">情感状态</string>
+    <string name="live_place">居住地</string>
+    <!-- 性别 -->
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <!-- 学历 -->
+    <string name="primary_school">小学</string>
+    <string name="junior_middle_school">初中</string>
+    <string name="high_school">高中</string>
+    <string name="secondary_specialized_school">中专</string>
+    <string name="junior_College">大专</string>
+    <string name="undergraduate">本科</string>
+    <string name="graduate_student">研究生</string>
+    <string name="master">硕士</string>
+    <string name="doctor">博士</string>
+    <!-- 身高 -->
+    <string name="cm_150_160">150 &#8211; 160</string>
+    <string name="cm_160_170">160 &#8211; 170</string>
+    <string name="cm_170_180">170 &#8211; 180</string>
+    <string name="cm_180_190">180 &#8211; 190</string>
+    <string name="cm_190_200">190 &#8211; 200</string>
+    <string name="cm_200_210">200 &#8211; 210</string>
+    <!-- 年龄 -->
+    <string name="age_group_1">0 &#8211; 18</string>
+    <string name="age_group_2">18 &#8211; 22</string>
+    <string name="age_group_3">22 &#8211; 25</string>
+    <string name="age_group_4">25 &#8211; 28</string>
+    <string name="age_group_5">28 &#8211; 30</string>
+    <string name="age_group_6">30 &#8211; 35</string>
+    <string name="age_group_7">35 &#8211; 40</string>
+    <!-- 收入-->
+    <string name="income_group_1">2000以下</string>
+    <string name="income_group_2">2000 &#8211; 4000</string>
+    <string name="income_group_3">4000 &#8211; 6000</string>
+    <string name="income_group_4">6000 &#8211; 8000</string>
+    <string name="income_group_5">8000 &#8211; 10000</string>
+    <string name="income_group_6">10000 &#8211; 20000</string>
+    <string name="income_group_7">20000以上</string>
+    <!-- 情感-->
+    <string name="married">已婚</string>
+    <string name="single">单身</string>
+    <string name="in_love">热恋中</string>
+    <string name="secrecy">保密</string>
+    <!-- 举报理由-->
+    <string name="sexy_obscene">色情淫秽</string>
+    <string name="Illegal_crime">违法犯罪</string>
+    <string name="cheat_money">欺诈骗钱</string>
+    <string name="politics">政治</string>
+    <string name="advertisement_cheat">广告欺骗</string>
+    <string name="false_identity">虚假身份</string>
+    <string name="harass_info">骚扰信息</string>
+    <string name="improper_speek">不当发言</string>
+
+    <string name="week_no_data">当周无历史记录</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+
+</resources>

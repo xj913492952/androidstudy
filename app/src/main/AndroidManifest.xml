@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <!-- 粗略位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 精确位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="com.style.app.MyApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="false"
+        android:supportsRtl="false"
+        android:theme="@style/BaseAppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup,android:icon,android:label,android:supportsRtl,android:theme">
+
+        <activity
+            android:name="example.home.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="example.login.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="example.viewPagerBanner.BannerActivity"
+            android:theme="@style/AppTheme.Translucent.ImageScan" />
+        <activity android:name="example.dialog.DialogActivity" />
+        <activity android:name="example.activity.SafeKeyboardActivity" />
+
+        <activity android:name="example.album.SelectLocalPictureActivity" />
+        <activity android:name="example.address.AddressActivity" />
+        <activity
+            android:name="example.gesture.VerticalSlideFinishActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.Translucent" />
+        <activity
+            android:name="example.gesture.DispatchGestureActivity"
+            android:theme="@style/AppTheme.Translucent" />
+        <activity android:name="example.gesture.SimpleGestureActivity" />
+        <activity android:name="example.scroll.drag.DragActivity" />
+        <activity android:name="example.scroll.swipeMenu.SwipeMenuActivity" />
+        <activity android:name="example.activity.AnimatorActivity" />
+        <activity android:name="example.activity.ReadAssetsActivity" />
+        <activity android:name="example.dialog.WheelActivity" />
+        <activity android:name="example.filedown.FileDownActivity" />
+        <activity android:name="example.web.WebViewActivity" />
+        <activity android:name="example.web.WebViewAndJSActivity" />
+        <activity android:name="example.media.VideoTestActivity" />
+        <activity android:name="example.media.AudioRecordActivity" />
+        <activity android:name="example.media.socket.chat.SocketTestActivity" />
+        <activity android:name="example.media.video.LocalVideoActivity" />
+        <activity android:name="example.media.video.VideoRecorderActivity" />
+        <activity android:name="example.wifi.WifiTestActivity" />
+        <activity android:name="example.queue.QueueTestActivity" />
+        <activity android:name="example.db.TestRoomActivity" />
+        <activity android:name="example.subThreadLooper.MsgToSubActivity" />
+        <activity android:name="example.activity.JniTestActivity" />
+        <activity android:name="example.aidl.AidlActivity" />
+        <activity android:name="example.encrypt.EncryptActivity" />
+        <activity android:name="example.web_service.WebServiceActivity" />
+        <activity android:name="example.web_service.CoroutineActivity" />
+        <activity android:name="example.activity.GlideDealActivity" />
+        <activity android:name="example.activity.QRCodeActivity" />
+        <activity android:name="example.activity.PreviewActivity" />
+        <activity
+            android:name="example.editLayout.EditLayoutChangeActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="example.fragmentAdapter.TabViewPager2Activity" />
+        <activity android:name="example.fragmentAdapter.ViewPager2Activity" />
+        <activity
+            android:name="example.editLayout.FullScreenBottomEditLayoutActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name="example.customView.CustomViewMainActivity" />
+        <activity android:name="example.customView.WriteWordActivity" />
+        <activity android:name="example.customView.DrawViewActivity" />
+        <activity android:name="example.customView.SuspendWindowActivity" />
+        <activity android:name="example.customView.HeartLineActivity" />
+        <activity android:name="example.customView.TempActivity" />
+        <activity android:name="example.customView.BpActivity" />
+        <activity android:name="example.customView.ReportTrendActivity" />
+        <activity android:name="example.customView.SleepWeekActivity" />
+        <activity android:name="example.customView.SportWeekActivity" />
+        <activity
+            android:name="example.customView.EcgActivity"/>
+        <activity android:name="example.customView.RecordAudioViewActivity" />
+        <activity android:name="example.gesture.XXRefreshActivity" />
+        <activity android:name="example.activity.BottomSheetBehaviorActivity" />
+        <activity
+            android:name="example.viewPager.ImageScanActivity"
+            android:theme="@style/AppTheme.Translucent" />
+        <activity android:name="example.viewPager.GlideListActivity" />
+        <activity android:name="example.music.MusicListActivity" />
+        <activity android:name="com.style.service.remote.RemotePlayActivity" />
+        <activity
+            android:name="example.scroll.ScrollingActivity"
+            android:label="@string/title_activity_scrolling" />
+        <activity
+            android:name="example.scroll.scroll_stop.ScrollingStopTopActivity"
+            android:label="@string/title_activity_scrolling" />
+        <activity
+            android:name="example.scroll.ScrollingParallaxActivity"
+            android:label="@string/title_activity_scrolling" />
+        <activity android:name="example.viewPagerCards.fragments.CardFragmentActivity" />
+        <activity android:name="example.viewPagerCards.views.CardActivity" />
+        <activity android:name="example.location.LocationActivity" />
+
+        <!--Service及其他-->
+
+        <!-- APP新版本下载服务 -->
+        <service
+            android:name="com.style.service.appNewVersion.DownNewAppService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="888">
+                <action android:name="com.style.download.new.version" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.style.service.fileDownload.FileDownloadService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="com.style.file.download" />
+            </intent-filter>
+        </service>
+        <!-- exported：是否允许外部应用程序访问，版本为16或者更低时他的默认值是true。如果是17和以上的版本默认值是false。 -->
+        <!--google大坑，不注册竟然不报错-->
+        <service
+            android:name="com.style.service.music.PlayMusicService"
+            android:exported="false">
+            <intent-filter android:priority="998">
+                <action android:name="music.play.service" />
+            </intent-filter>
+        </service>
+        <!-- 语音悬浮服务 -->
+        <service android:name="com.style.service.suspendWindow.VoiceSuspendService" />
+        <!-- 视频悬浮服务 -->
+        <service android:name="com.style.service.suspendWindow.VideoSuspendService" />
+        <!-- 来电悬浮服务 -->
+        <service android:name="com.style.service.suspendWindow.CallInSuspendService" />
+        <!--单独进行播放音乐服务-->
+        <service
+            android:name="com.style.service.remote.RemotePlayService"
+            android:process="com.offline.message"
+            android:exported="false">
+            <intent-filter android:priority="999">
+                <action android:name="action.remote.play" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="59350c69c62dca17b8000f82" />
+        <!-- 友盟统计app渠道来源时需要的字段信息 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${ENVIRONMENT}" />
+        <!-- 阿里热修复 -->
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="24874332" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="fc195ecea3d8d858c497193e0804e134" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="RSA密钥" />
+
+    </application>
+
+</manifest>

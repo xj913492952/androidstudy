@@ -1,0 +1,165 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+//打包时间
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd_HH_mm_ss", TimeZone.getDefault())
+}
+//获取local.properties的内容
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+android {
+    namespace "com.style.framework"
+    compileSdkVersion ANDROID_COMPILE_SDK_VERSION
+    //buildToolsVersion ANDROID_BUILD_TOOLS_VERSION
+    //每个产品公共属性
+    defaultConfig {
+        applicationId "com.style.framework"
+        minSdkVersion ANDROID_MIN_SDK_VERSION
+        targetSdkVersion ANDROID_TARGET_SDK_VERSION
+        versionCode 7
+        versionName '1.1.7'
+        multiDexEnabled true //突破应用方法数65535的一个限制
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        //不配置会根据连接手机加载对应cpu类型so库
+        ndk {
+            //moduleName "helloNDK"
+            abiFilters "armeabi-v7a" //, "arm64-v8a", "armeabi"
+        }
+    }
+    //-frtti支持 RTTI,,-fexceptions启用对 C++ 异常处理的支持
+    //菜单build下make app会生成so文件，在app/build/intermediates/cmake目录下
+    //原理：通过读取CMakeLists.txt文件编译cpp生成so再加载到apk里面
+    externalNativeBuild {
+        cmake {
+            path 'CMakeLists.txt'
+            //cppFlags "-frtti -fexceptions"
+        }
+    }
+    //多维度
+    flavorDimensions "model", "version"
+    productFlavors {
+        /*_sharp_S2 {
+            dimension "model"
+        }*/
+        _sharp_R3 {
+            dimension "model"
+        }
+        _9_0_0_ {
+            dimension = "version"
+            manifestPlaceholders = [ENVIRONMENT: "豌豆荚"]
+        }
+        /*_8_1_0_ {
+            dimension = "version"
+            manifestPlaceholders = [ENVIRONMENT: "360"]
+        }*/
+    }
+    android.applicationVariants.all { variant ->    //批量修改Apk名字
+        variant.outputs.all { output ->
+            //def fileDir = "${project.rootDir.absolutePath}/publish/${variant.flavorName}/${variant.buildType.name}"
+            //variant.getPackageApplication().outputDirectory = new File(fileDir)
+            outputFileName = "${variant.flavorName}_v${variant.versionName}_${variant.buildType.name}_${releaseTime()}.apk"
+        }
+    }
+    signingConfigs {
+        debug {
+            //storeFile file(properties.getProperty("STORE_FILE_DEBUG"))
+            /*storePassword properties.getProperty("STORE_PASSWORD")
+              keyAlias project.KEY_ALIAS
+              keyPassword project.KEY_PASSWORD*/
+            //v2SigningEnabled false
+        }
+        release {
+            storeFile file("D:/AndroidStudioProjects/androidStudy/app/signingConfig/release.jks")
+            storePassword "dmc19910809"
+            keyAlias "keyname"
+            keyPassword "dmc19910809"
+        }
+    }
+    buildTypes {
+        debug {
+            buildConfigField("boolean", "LOG_ENABLE", "true")
+            debuggable true
+            jniDebuggable true
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        /*preview {
+            buildConfigField("boolean", "LOG_ENABLE", "true")
+            debuggable true
+            jniDebuggable true
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            buildConfigField("boolean", "LOG_ENABLE", "false")
+            debuggable false
+            jniDebuggable false
+            minifyEnabled true
+            zipAlignEnabled true
+            //慎用，导致很多未知错误
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }*/
+    }
+    lintOptions {
+        //  true--所有正式版构建执行规则生成崩溃的lint检查，如果有崩溃问题将停止构建
+        checkReleaseBuilds false
+        // true--错误发生后停止gradle构建
+        abortOnError false
+    }
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+        buildConfig true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'androidx.multidex:multidex-instrumentation:2.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0"
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.palette:palette:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.google.android:flexbox:1.0.0'
+    implementation "com.google.code.gson:gson:$gson_version"
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    //java注解
+    implementation 'org.glassfish:javax.annotation:10.0-b28'
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+    implementation 'com.aliyun.ams:alicloud-android-hotfix:3.2.2'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.4'
+    implementation project(':lib_common')
+    implementation project(':lib_custom_view')
+    implementation project(':lib_media_picker')
+    implementation project(':lib_video_record')
+    implementation project(':lib_wheel_picker')
+    implementation project(':lib_zxing')
+}

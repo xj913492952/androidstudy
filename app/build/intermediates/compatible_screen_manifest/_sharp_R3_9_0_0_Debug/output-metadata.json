@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "COMPATIBLE_SCREEN_MANIFEST",
+    "kind": "Directory"
+  },
+  "applicationId": "com.style.framework",
+  "variantName": "_sharp_R3_9_0_0_Debug",
+  "elements": []
+}

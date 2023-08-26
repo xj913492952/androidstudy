@@ -1,0 +1,46 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.dmcbig.mediapicker" >
+4
+5    <uses-sdk android:minSdkVersion="21" />
+5-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml
+6
+7    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+7-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:2:5-80
+7-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:2:22-77
+8
+9    <application>
+9-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:4:5-20:19
+10        <activity
+10-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:5:9-9:68
+11            android:name="com.dmcbig.mediapicker.PickerActivity"
+11-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:9:13-65
+12            android:configChanges="orientation|screenSize"
+12-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:6:13-59
+13            android:theme="@style/Theme.AppCompat.NoActionBar"
+13-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:8:13-63
+14            android:windowSoftInputMode="stateAlwaysHidden" />
+14-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:7:13-60
+15        <activity
+15-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:10:9-14:69
+16            android:name="com.dmcbig.mediapicker.PreviewActivity"
+16-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:14:13-66
+17            android:configChanges="orientation|screenSize"
+17-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:11:13-59
+18            android:theme="@style/Theme.AppCompat.NoActionBar"
+18-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:13:13-63
+19            android:windowSoftInputMode="stateAlwaysHidden" />
+19-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:12:13-60
+20        <activity
+20-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:15:9-19:71
+21            android:name="com.dmcbig.mediapicker.TakePhotoActivity"
+21-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:19:13-68
+22            android:configChanges="orientation|screenSize"
+22-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:16:13-59
+23            android:theme="@style/Theme.AppCompat.NoActionBar"
+23-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:18:13-63
+24            android:windowSoftInputMode="stateAlwaysHidden" />
+24-->E:\Android\Projects\androidstudy\lib_media_picker\src\main\AndroidManifest.xml:17:13-60
+25    </application>
+26
+27</manifest>

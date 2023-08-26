@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/capture_crop_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.zxing.activity.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:frame_color="@color/viewfinder_frame"
+        app:corner_color="@color/corner_color"
+        app:laser_color="@color/viewfinder_laser"
+        app:label_text="@string/scan_qrcode_tips"
+        app:label_text_color="#DCBA78"
+        app:label_text_size="13dp"
+        app:mask_color="@color/viewfinder_mask"
+        app:result_color="@color/result_view"
+        app:result_point_color="@color/possible_result_points" />
+
+    <include layout="@layout/title_bar_transparent" />
+</RelativeLayout>

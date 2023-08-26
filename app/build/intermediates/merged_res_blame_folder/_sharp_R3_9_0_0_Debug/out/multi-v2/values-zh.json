@@ -1,0 +1,60 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.style.framework.app-merge_sharp_R3_9_0_0_DebugResources-33:/values-zh/values-zh.xml",
+            "map": [
+                {
+                    "source": "E:\\Android\\Projects\\androidstudy\\lib_media_picker\\build\\intermediates\\packaged_res\\debug\\values-zh\\values-zh.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,116,165,208,251,294,330,377,432,493,532,570,622,668,717,769,806",
+                        "endColumns": "60,48,42,42,42,35,46,54,60,38,37,51,45,48,51,36,47",
+                        "endOffsets": "111,160,203,246,289,325,372,427,488,527,565,617,663,712,764,801,849"
+                    },
+                    "to": {
+                        "startLines": "4,6,7,8,9,10,11,12,13,14,15,16,17,18,19,22,23",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "125,221,270,313,356,399,435,482,537,598,637,675,727,773,822,1074,1111",
+                        "endColumns": "60,48,42,42,42,35,46,54,60,38,37,51,45,48,51,36,47",
+                        "endOffsets": "181,265,308,351,394,430,477,532,593,632,670,722,768,817,869,1106,1154"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\密码：0000\\.gradle\\caches\\transforms-3\\080b4c4acdc72b3432a5041b33b676e0\\transformed\\jetified-SmartRefreshLayout-1.0.5.1\\res\\values-zh\\values-zh.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,163",
+                        "endColumns": "107,91",
+                        "endOffsets": "158,250"
+                    },
+                    "to": {
+                        "startLines": "20,21",
+                        "startColumns": "4,4",
+                        "startOffsets": "874,982",
+                        "endColumns": "107,91",
+                        "endOffsets": "977,1069"
+                    }
+                },
+                {
+                    "source": "E:\\Android\\Projects\\androidstudy\\lib_wheel_picker\\build\\intermediates\\packaged_res\\debug\\values-zh\\values-zh.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,89,125",
+                        "endColumns": "33,35,34",
+                        "endOffsets": "84,120,155"
+                    },
+                    "to": {
+                        "startLines": "2,3,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,89,186",
+                        "endColumns": "33,35,34",
+                        "endOffsets": "84,120,216"
+                    }
+                }
+            ]
+        }
+    ]
+}

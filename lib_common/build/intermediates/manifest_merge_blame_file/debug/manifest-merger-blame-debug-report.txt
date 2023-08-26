@@ -1,0 +1,43 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="com.style.lib.common" >
+5
+6    <uses-sdk android:minSdkVersion="21" />
+6-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml
+7
+8    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+8-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:4:5-79
+8-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:4:22-76
+9
+10    <application>
+10-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:5:5-20:19
+11        <activity
+11-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:6:9-9:72
+12            android:name="tech.gaolinfeng.imagecrop.lib.ImageCropActivity"
+12-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:7:13-75
+13            android:screenOrientation="portrait"
+13-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:8:13-49
+14            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+14-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:9:13-69
+15        <!-- 自定义FileProvider来避免冲突, 对应的resource也要保证唯一 -->
+16        <provider
+16-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:11:9-19:20
+17            android:name="androidx.core.content.FileProvider"
+17-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:12:13-62
+18            android:authorities="com.style.file.provider"
+18-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:13:13-58
+19            android:exported="false"
+19-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:14:13-37
+20            android:grantUriPermissions="true" >
+20-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:15:13-47
+21            <meta-data
+21-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:16:13-18:58
+22                android:name="android.support.FILE_PROVIDER_PATHS"
+22-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:17:17-67
+23                android:resource="@xml/provider_paths" />
+23-->E:\Android\Projects\androidstudy\lib_common\src\main\AndroidManifest.xml:18:17-55
+24        </provider>
+25    </application>
+26
+27</manifest>

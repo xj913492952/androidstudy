@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="black_full">#FE000000</color>
+    <color name="click_bg_dark">#BFBFBF</color>
+    <color name="click_bg_dark_light">#E0E0E0</color>
+    <color name="colorPrimary">#003D79</color>
+    <color name="colorPrimaryDark">#003D79</color>
+    <color name="color_text_gray_light">#999999</color>
+    <color name="color_theme_main">#B68B48</color>
+    <color name="color_ui_bg_gray">#F6F6F6</color>
+    <color name="custom_keyboard_text">#000000</color>
+    <color name="divider">#D1D1D1</color>
+    <color name="divider_color">@color/windowBackground</color>
+    <color name="pull_refresh_bg">#FFF5F5F5</color>
+    <color name="pull_refresh_text">#ff999999</color>
+    <color name="textColorPrimary">#333333</color>
+    <color name="title_bar_common_title">#343434</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="windowBackground">#FFF5F5F5</color>
+    <color name="windowBackground_translucent">#30000000</color>
+    <dimen name="text_state_size">14sp</dimen>
+    <integer name="animation_loading">150</integer>
+    <string name="app_name">androidstudy</string>
+    <string name="digits_password">abcdefghijklmnopqrstuvwxyz0123456789</string>
+    <string name="loading">加载中…</string>
+    <string name="text_refresh">刷新</string>
+    <string name="text_state_empty_common">数据为空</string>
+    <string name="text_status_loading" ns1:ignore="ExtraTranslation">努力加载中…</string>
+    <string name="text_status_net_error">网络错误</string>
+    <style name="Dialog_General" parent="android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        
+        <item name="android:backgroundDimEnabled">true</item>
+        
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        
+        <item name="android:windowBackground">@drawable/bg_window_transparent</item>
+    </style>
+    <style name="Dialog_OutSide_Transparent" parent="@style/Dialog_General">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="KeyboardNumberText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">@drawable/selector_keyboard_click</item>
+        <item name="android:textColor">@color/custom_keyboard_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="MaterialProgressDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        
+        <item name="colorAccent">#FFB68B48</item>
+    </style>
+    <declare-styleable name="RefreshProgressBar">
+        <attr format="boolean" name="arc_indeterminate"/>     
+        <attr format="integer" name="arc_progress"/>
+        <attr format="float" name="arc_finished_start_angle"/>
+        <attr format="dimension" name="arc_stroke_width"/>
+        <attr format="integer" name="arc_max"/>
+        <attr format="integer" name="arc_total_sweep_angle"/>
+        <attr format="color" name="arc_unfinished_color"/>
+        <attr format="color" name="arc_finished_color"/>
+    </declare-styleable>
+</resources>
