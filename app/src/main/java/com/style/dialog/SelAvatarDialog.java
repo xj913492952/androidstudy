@@ -1,10 +1,7 @@
 package com.style.dialog;
 
-import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +10,6 @@ import android.widget.Button;
 
 import com.style.base.BaseDialog;
 import com.style.framework.R;
-import com.style.utils.DeviceInfoUtil;
 
 public class SelAvatarDialog extends BaseDialog {
 
@@ -23,7 +19,7 @@ public class SelAvatarDialog extends BaseDialog {
     private Button bt_selCancel;
 
     public SelAvatarDialog(Context context) {
-        super(context, R.style.Dialog_General);
+        super(context, com.style.lib.common.R.style.Dialog_General);
     }
 
     @Override

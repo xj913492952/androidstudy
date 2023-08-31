@@ -92,8 +92,8 @@ public class AddressActivity extends BaseTitleBarActivity {
             }
         });
         requestReadContactsPermissions();
-        View v2 = bd.commonLoadingLayout.setEmptyView(R.layout.common_loading_layout_empty_2);
-        v2.findViewById(R.id.common_loading_layout_tv_empty_2).setOnClickListener(v -> bd.commonLoadingLayout.showLoading());
+        View v2 = bd.commonLoadingLayout.setEmptyView(com.style.lib.common.R.layout.common_loading_layout_empty_2);
+        v2.findViewById(com.style.lib.common.R.id.common_loading_layout_tv_empty_2).setOnClickListener(v -> bd.commonLoadingLayout.showLoading());
         bd.btn1.setOnClickListener(v -> bd.commonLoadingLayout.showLoading());
         bd.btn2.setOnClickListener(v -> bd.commonLoadingLayout.showContent());
         bd.btn3.setOnClickListener(v -> bd.commonLoadingLayout.showEmpty());

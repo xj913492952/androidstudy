@@ -4,22 +4,16 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
-import android.view.MotionEvent;
-import android.view.VelocityTracker;
 import android.view.View;
-import android.view.animation.DecelerateInterpolator;
-import android.widget.Scroller;
 
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * 自定义部分滚动View

@@ -29,7 +29,7 @@ public abstract class BaseSingleWheelDialog extends BaseDialog {
     private String currentItem;
 
     public BaseSingleWheelDialog(Context context, List<String> list) {
-        super(context, R.style.Dialog_General);
+        super(context, com.style.lib.common.R.style.Dialog_General);
         dataList = list;
     }
 
