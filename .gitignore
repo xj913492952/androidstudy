@@ -1,18 +1,13 @@
+*.iml
 .gradle
 .idea
-.externalNativeBuild
 local.properties
-*.iml
-build
+/build
+.externalNativeBuild
 .cxx
-app/build
+
 app/proguardMapping.txt
 app/proguardLog
 app/signingConfig
-lib_custom_view/build
-lib_common/build
-lib_media_picker/build
-lib_video_record/build
-lib_wheel_picker/build
-lib_zxing/build
+
 
