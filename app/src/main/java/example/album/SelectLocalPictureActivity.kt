@@ -138,6 +138,7 @@ public class SelectLocalPictureActivity : BaseTitleBarActivity() {
 
     val CODE_TAKE_CAMERA = 997// 拍照
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == RESULT_OK || resultCode == PickerConfig.RESULT_CODE) {

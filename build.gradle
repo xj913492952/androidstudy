@@ -1,11 +1,11 @@
-
 buildscript {
-    ext.kotlin_version = '1.6.10'
+    ext.kotlin_version = '1.9.10'
 
     repositories {
         google()
         jcenter()
         mavenCentral()
+        gradlePluginPortal()
     }
 
     dependencies {
@@ -18,37 +18,39 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
         maven {
             url "https://maven.aliyun.com/nexus/content/repositories/releases"
         }
         maven {
             url "https://jitpack.io"
         }
-
+        gradlePluginPortal()
     }
-    configurations.all {
+    configurations.configureEach {
         resolutionStrategy {
             force 'androidx.annotation:annotation-experimental:1.1.0'
-            force 'androidx.lifecycle:lifecycle-livedata:2.5.1'
+            force 'androidx.lifecycle:lifecycle-livedata:2.6.1'
             force 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
         }
     }
 }
 
-task clean(type: Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
 
 ext {
-    ANDROID_COMPILE_SDK_VERSION = 33
-    ANDROID_MIN_SDK_VERSION = 21
-    ANDROID_TARGET_SDK_VERSION = 33
+    COMPILE_SDK = 33
+    MIN_SDK = 21
+    TARGET_SDK = 33
+    NDK = '21.4.7075529'
 
-    appcompat_version = '1.3.0'
-    recyclerview_version = '1.2.1'
-    glide_version = "4.9.0"
-    gson_version = "2.8.6"
-    json_version = "1.2.58"
-    rxjava_version = "2.2.8"
-    rxandroid_version = "2.1.1"
+    appcompat_version = '1.6.1'
+    recyclerview_version = '1.3.0'
+    glide_version = '4.16.0'
+    gson_version = '2.10.1'
+    json_version = '2.0.21.android'
+    rxjava_version = '2.2.21'
+    rxandroid_version = '2.1.1'
 }

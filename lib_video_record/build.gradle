@@ -2,9 +2,9 @@ apply plugin: 'com.android.library'
 
 android {
     namespace "com.style.lib.media.video"
-    compileSdkVersion ANDROID_COMPILE_SDK_VERSION
+    compileSdk COMPILE_SDK
     defaultConfig {
-        minSdkVersion ANDROID_MIN_SDK_VERSION
+        minSdk MIN_SDK
     }
     buildTypes {
         preview {

@@ -1,6 +1,8 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
 
 //打包时间
 static def releaseTime() {
@@ -12,12 +14,12 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 
 android {
     namespace "com.style.framework"
-    compileSdkVersion ANDROID_COMPILE_SDK_VERSION
+    compileSdk COMPILE_SDK
     //每个产品公共属性
     defaultConfig {
         applicationId "com.style.framework"
-        minSdkVersion ANDROID_MIN_SDK_VERSION
-        targetSdkVersion ANDROID_TARGET_SDK_VERSION
+        minSdk MIN_SDK
+        targetSdk TARGET_SDK
         versionCode 7
         versionName '1.1.7'
         multiDexEnabled true //突破应用方法数65535的一个限制
@@ -55,8 +57,8 @@ android {
             manifestPlaceholders = [ENVIRONMENT: "360"]
         }*/
     }
-    android.applicationVariants.all { variant ->    //批量修改Apk名字
-        variant.outputs.all { output ->
+    android.applicationVariants.configureEach { variant ->    //批量修改Apk名字
+        variant.outputs.configureEach { output ->
             //def fileDir = "${project.rootDir.absolutePath}/publish/${variant.flavorName}/${variant.buildType.name}"
             //variant.getPackageApplication().outputDirectory = new File(fileDir)
             outputFileName = "${variant.flavorName}_v${variant.versionName}_${variant.buildType.name}_${releaseTime()}.apk"
@@ -83,7 +85,7 @@ android {
             debuggable true
             jniDebuggable true
             minifyEnabled false
-            zipAlignEnabled false
+            //zipAlignEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.debug
@@ -116,6 +118,11 @@ android {
         // true--错误发生后停止gradle构建
         abortOnError false
     }
+    kapt {
+        correctErrorTypes true
+        useBuildCache true
+    }
+
     buildFeatures {
         dataBinding true
         viewBinding true
@@ -123,34 +130,34 @@ android {
         aidl(true)
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = '17'
     }
-    ndkVersion '21.4.7075529'
+    ndkVersion NDK
 
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.5.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     implementation 'androidx.multidex:multidex-instrumentation:2.0.0'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation "androidx.appcompat:appcompat:$appcompat_version"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.palette:palette:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'com.google.android:flexbox:1.0.0'
     implementation "com.google.code.gson:gson:$gson_version"
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'

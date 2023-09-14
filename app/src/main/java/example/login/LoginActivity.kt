@@ -8,7 +8,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.style.base.BaseActivity
 import com.style.entity.UserInfo
-import com.style.framework.R
 import com.style.framework.databinding.ActivityLoginBinding
 import example.home.MainActivity
 
@@ -31,13 +30,13 @@ class LoginActivity : BaseActivity() {
         loginModel = ViewModelProvider(this).get(LoginModel::class.java)
 
         loginModel.user.observe(this, object : Observer<UserInfo> {
-            override fun onChanged(t: UserInfo?) {
+            override fun onChanged(value: UserInfo) {
 
                 setUserView(loginModel.user.value!!)
             }
         })
         loginModel.loginState.observe(this, Observer<Boolean> { t ->
-            if (t!!) {
+            if (t) {
                 startActivity(Intent(getContext(), MainActivity::class.java))
                 finish()
             } else {

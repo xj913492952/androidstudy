@@ -1,12 +1,14 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
 
 android {
     namespace "com.style.lib.common"
-    compileSdkVersion ANDROID_COMPILE_SDK_VERSION
+    compileSdk COMPILE_SDK
     defaultConfig {
-        minSdkVersion ANDROID_MIN_SDK_VERSION
+        minSdk MIN_SDK
 
         ndk {
             //moduleName "helloNDK"
@@ -29,28 +31,31 @@ android {
         buildConfig true
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
-    ndkVersion '21.4.7075529'
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    ndkVersion NDK
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
-    api 'androidx.room:room-runtime:2.3.0'
-    kapt 'androidx.room:room-compiler:2.3.0'
+    api 'androidx.room:room-runtime:2.5.1'
+    kapt 'androidx.room:room-compiler:2.5.1'
     api 'org.simple:androideventbus:1.0.5.1'
     api "com.alibaba:fastjson:$json_version"
     api "com.google.code.gson:gson:$gson_version"
     api "io.reactivex.rxjava2:rxjava:$rxjava_version"
     api "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
-    api 'com.squareup.retrofit2:retrofit:2.6.0'
-    api 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
-    api "com.squareup.okhttp3:okhttp:3.14.1"
-    api 'com.squareup.okhttp3:logging-interceptor:3.14.1'
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    api 'com.squareup.okhttp3:okhttp:4.11.0'
+    api 'com.squareup.okhttp3:logging-interceptor:4.11.0'
     //如果主Module的布局文件里面使用了库工程依赖的自定义view，必须用api方式，否则报databinding错误且不会指明具体错误.
     api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
     implementation project(':lib_custom_view')
